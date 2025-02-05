@@ -9,9 +9,9 @@ function LocationSection() {
   return (
     <section id="location" className="py-20 bg-background/50">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-4xl font-bold mb-8">Visit Us</h2>
+        <h2 className="text-4xl font-bold mb-8">Ubicación</h2>
         <p className="text-xl text-muted-foreground">
-          Libertad 2864 - San Francisco - Córdoba - Argentina
+          Libertad 2864 - San Francisco
         </p>
         {/* Add map integration here if needed */}
       </div>

@@ -15,34 +15,34 @@ const artists: Artist[] = [
     instagram: "https://www.instagram.com/huevo.tmno",
     image: "https://placehold.co/400x500",
     styles: ["Traditional", "Neo-Traditional"],
-    bio: "Specializing in bold, traditional designs with a modern twist."
+    bio: "Especializado en diseños tradicionales con un toque moderno."
   },
   {
     name: "Emi",
     instagram: "https://www.instagram.com/emi_tatuero",
     image: "https://placehold.co/400x500",
     styles: ["Blackwork", "Dotwork"],
-    bio: "Creating intricate patterns and bold blackwork designs."
+    bio: "Creando patrones intrincados y diseños en blackwork."
   },
   {
     name: "Pity",
     instagram: "https://www.instagram.com/pitylocuras",
     image: "https://placehold.co/400x500",
     styles: ["Japanese", "Color"],
-    bio: "Master of vibrant colors and Japanese-inspired artwork."
+    bio: "Maestro del color y arte inspirado en el estilo japonés."
   },
   {
     name: "Dalma",
     instagram: "https://www.instagram.com/d.almatattoo",
     image: "https://placehold.co/400x500",
     styles: ["Fine Line", "Minimalist"],
-    bio: "Specializing in delicate, minimalist designs."
+    bio: "Especializada en diseños delicados y minimalistas."
   }
 ];
 
 export default function ArtistSection() {
   return (
-    <section id="artists" className="py-20 bg-background">
+    <section id="artists" className="py-20 bg-background/30 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <motion.h2 
           className="text-4xl font-bold text-center mb-12"
@@ -50,7 +50,7 @@ export default function ArtistSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          Our Artists
+          Nuestros Artistas
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -78,7 +78,7 @@ export default function ArtistSection() {
                   <SiInstagram className="text-5xl text-white" />
                 </div>
               </a>
-              
+
               <div className="mt-4 space-y-2">
                 <h3 className="text-xl font-bold">{artist.name}</h3>
                 <p className="text-muted-foreground">{artist.bio}</p>
