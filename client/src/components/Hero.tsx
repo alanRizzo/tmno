@@ -46,7 +46,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Main content area */}
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col justify-center">
         {/* Top section with logo */}
         <motion.div 
           className="flex-1 flex items-center justify-center p-4"
@@ -89,20 +89,6 @@ export default function Hero() {
                 }}
               />
             </motion.a>
-          </div>
-        </motion.div>
-
-        {/* Bottom section with quote */}
-        <motion.div 
-          className="p-8 md:p-16 bg-background/5 backdrop-blur-sm"
-          initial={{ y: 100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-        >
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-2xl md:text-3xl text-muted-foreground max-w-2xl mx-auto gothic-quote">
-              El arte en la piel no es solo tinta, es la expresión rebelde del alma que busca libertad en cada trazo
-            </p>
           </div>
         </motion.div>
       </div>

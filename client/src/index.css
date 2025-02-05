@@ -15,6 +15,7 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     position: relative;
+    z-index: 0; /* Added to ensure background is behind other elements */
   }
 
   body::before {
@@ -25,7 +26,7 @@
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.85);
-    z-index: 1;
+    z-index: -1; /* Changed z-index to be below the body */
   }
 
   main {
@@ -36,15 +37,6 @@
   nav {
     z-index: 50;
   }
-}
-
-/* Gothic Font */
-@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
-
-.gothic-quote {
-  font-family: 'UnifrakturMaguntia', cursive;
-  letter-spacing: 0.05em;
-  text-transform: none;
 }
 
 /* Glitch effect */
