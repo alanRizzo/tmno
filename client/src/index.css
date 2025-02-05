@@ -8,16 +8,15 @@
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased text-foreground;
     background-image: url('/full-size8.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    position: relative;
-    z-index: 0; /* Added to ensure background is behind other elements */
   }
 
+  /* Dark overlay for better text readability */
   body::before {
     content: '';
     position: fixed;
@@ -25,17 +24,19 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.85);
-    z-index: -1; /* Changed z-index to be below the body */
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 0;
   }
 
+  /* Ensure content is above the overlay */
   main {
     position: relative;
-    z-index: 2;
+    z-index: 1;
   }
 
+  /* Keep navigation above all content */
   nav {
-    z-index: 50;
+    z-index: 100;
   }
 }
 

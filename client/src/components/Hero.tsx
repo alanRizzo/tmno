@@ -29,7 +29,7 @@ export default function Hero() {
     <div 
       ref={containerRef}
       onMouseMove={handleMouseMove} 
-      className="relative min-h-screen flex items-stretch overflow-hidden bg-black"
+      className="relative min-h-screen flex items-stretch overflow-hidden"
     >
       {/* Vertical text on the left */}
       <motion.div 

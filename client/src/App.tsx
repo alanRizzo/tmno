@@ -7,13 +7,12 @@ import ArtistSection from "@/components/ArtistSection";
 
 function LocationSection() {
   return (
-    <section id="location" className="py-20 bg-background/50">
+    <section id="location" className="py-20">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-4xl font-bold mb-8">Ubicación</h2>
         <p className="text-xl text-muted-foreground">
           Libertad 2864 - San Francisco
         </p>
-        {/* Add map integration here if needed */}
       </div>
     </section>
   );
@@ -23,7 +22,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <Navigation />
-      <main className="bg-background text-foreground">
+      <main>
         <section id="home">
           <Hero />
         </section>
