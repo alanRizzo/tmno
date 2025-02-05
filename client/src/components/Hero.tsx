@@ -1,10 +1,8 @@
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import { useLocation } from "wouter";
 import { useEffect, useRef } from "react";
 
 export default function Hero() {
-  const [, navigate] = useLocation();
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Mouse follow effect
@@ -42,14 +40,14 @@ export default function Hero() {
       >
         <div className="transform -rotate-90 origin-center whitespace-nowrap">
           <span className="text-primary/50 font-mono tracking-widest text-xl">
-            EST. 2024 • INK MASTERS • CUSTOM DESIGNS
+            EST. 2024 • DISEÑOS PERSONALIZADOS • ARTE ÚNICO
           </span>
         </div>
       </motion.div>
 
       {/* Main content area */}
       <div className="flex-1 flex flex-col">
-        {/* Top section with dramatic heading */}
+        {/* Top section with logo */}
         <motion.div 
           className="flex-1 flex items-center justify-center p-4"
           initial={{ opacity: 0 }}
@@ -61,50 +59,50 @@ export default function Hero() {
             perspective: 1000,
           }}
         >
-          <div className="max-w-4xl space-y-8 text-right">
-            <motion.h1 
-              className="relative text-[8vw] font-black leading-none"
-              initial={{ y: 100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 0.5 }}
+          <div className="max-w-4xl space-y-8 text-center">
+            <motion.a
+              href="https://www.instagram.com/tumadrenosodia/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <span className="block text-primary relative">
-                BREAK
-                <span className="absolute inset-0 text-primary/80 animate-[glitch_3s_infinite]">BREAK</span>
-              </span>
-              <span className="block text-primary/80">THE</span>
-              <span className="block bg-gradient-to-r from-primary to-primary/20 bg-clip-text text-transparent">
-                ORDINARY
-              </span>
-            </motion.h1>
+              <img 
+                src="/logo.jpg" 
+                alt="Tu Madre Nos Odia"
+                className="w-64 h-64 object-contain relative"
+                style={{
+                  filter: "drop-shadow(0 0 20px rgba(255,0,0,0.3))",
+                }}
+              />
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent mix-blend-overlay"
+                animate={{
+                  opacity: [0.2, 0.4, 0.2],
+                  scale: [1, 1.02, 1],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+              />
+            </motion.a>
           </div>
         </motion.div>
 
-        {/* Bottom section with description and CTA */}
+        {/* Bottom section with quote */}
         <motion.div 
           className="p-8 md:p-16 bg-background/5 backdrop-blur-sm"
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
         >
-          <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-            <p className="text-lg md:text-xl text-muted-foreground max-w-md">
-              Where rebellion meets skin. Our artists don't just create tattoos—they 
-              forge permanent statements of defiance.
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto italic">
+              "El arte en la piel no es solo tinta, es la expresión rebelde del alma que busca libertad en cada trazo."
             </p>
-            <Button 
-              size="lg"
-              onClick={() => navigate("/book")}
-              className="bg-primary/20 hover:bg-primary/30 border border-primary text-primary hover:text-primary relative group overflow-hidden"
-            >
-              <span className="relative z-10">Break Free</span>
-              <motion.div 
-                className="absolute inset-0 bg-primary/10"
-                initial={false}
-                whileHover={{ scale: 1.5, rotate: 12 }}
-                transition={{ duration: 0.4 }}
-              />
-            </Button>
           </div>
         </motion.div>
       </div>
