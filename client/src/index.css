@@ -20,7 +20,7 @@
     content: '';
     position: fixed;
     inset: 0;
-    background-image: url('/full-size8.jpg');
+    background-image: url('/attached_assets/full-size8.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
