@@ -100,8 +100,8 @@ export default function Hero() {
           transition={{ duration: 1, delay: 1 }}
         >
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto italic">
-              "El arte en la piel no es solo tinta, es la expresión rebelde del alma que busca libertad en cada trazo."
+            <p className="text-2xl md:text-3xl text-muted-foreground max-w-2xl mx-auto gothic-quote">
+              El arte en la piel no es solo tinta, es la expresión rebelde del alma que busca libertad en cada trazo
             </p>
           </div>
         </motion.div>
