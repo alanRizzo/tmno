@@ -9,34 +9,36 @@
 
   body {
     @apply font-sans antialiased text-foreground;
+  }
+
+  #root {
+    min-height: 100vh;
+    position: relative;
+  }
+
+  #root::before {
+    content: '';
+    position: fixed;
+    inset: 0;
     background-image: url('/full-size8.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    z-index: -2;
   }
 
-  /* Dark overlay for better text readability */
-  body::before {
+  #root::after {
     content: '';
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background: rgba(0, 0, 0, 0.7);
-    z-index: 0;
+    z-index: -1;
   }
 
-  /* Ensure content is above the overlay */
   main {
     position: relative;
     z-index: 1;
-  }
-
-  /* Keep navigation above all content */
-  nav {
-    z-index: 100;
   }
 }
 
