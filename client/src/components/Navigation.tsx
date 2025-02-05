@@ -1,5 +1,4 @@
-import { cn } from "@/lib/utils";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export default function Navigation() {
@@ -11,8 +10,9 @@ export default function Navigation() {
       const currentScrollPos = window.scrollY;
       const isScrollingUp = prevScrollPos > currentScrollPos;
       const isAtTop = currentScrollPos < 10;
-      const isAtBottom = 
-        window.innerHeight + currentScrollPos >= document.documentElement.scrollHeight;
+      const isAtBottom =
+        window.innerHeight + currentScrollPos >=
+        document.documentElement.scrollHeight;
 
       // Show navigation only when scrolling up or at the top, never at the bottom
       setIsVisible((isScrollingUp || isAtTop) && !isAtBottom);
@@ -24,11 +24,11 @@ export default function Navigation() {
   }, [prevScrollPos]);
 
   const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <motion.nav 
+    <motion.nav
       className="fixed top-0 w-full z-[100]"
       initial={{ y: 0 }}
       animate={{ y: isVisible ? 0 : -100 }}
@@ -38,9 +38,9 @@ export default function Navigation() {
         <div className="container mx-auto px-4 h-full flex items-center justify-end">
           <div className="flex gap-8">
             {[
-              { id: 'home', label: 'Inicio' },
-              { id: 'artists', label: 'Artistas' },
-              { id: 'location', label: 'Ubicación' },
+              { id: "home", label: "Inicio" },
+              { id: "artists", label: "Artistas" },
+              { id: "location", label: "Dirección" },
             ].map(({ id, label }) => (
               <button
                 key={id}

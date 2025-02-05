@@ -15,42 +15,42 @@ const artists: Artist[] = [
     instagram: "https://www.instagram.com/huevo.tmno",
     image: "https://placehold.co/400x500",
     styles: ["Traditional", "Neo-Traditional"],
-    bio: "Especializado en diseños tradicionales con un toque moderno."
+    bio: "Especializado en diseños tradicionales con un toque moderno.",
   },
   {
     name: "Emi",
     instagram: "https://www.instagram.com/emi_tatuero",
     image: "https://placehold.co/400x500",
     styles: ["Blackwork", "Dotwork"],
-    bio: "Creando patrones intrincados y diseños en blackwork."
+    bio: "Creando patrones intrincados y diseños en blackwork.",
   },
   {
     name: "Pity",
     instagram: "https://www.instagram.com/pitylocuras",
     image: "https://placehold.co/400x500",
     styles: ["Japanese", "Color"],
-    bio: "Maestro del color y arte inspirado en el estilo japonés."
+    bio: "Maestro del color y arte inspirado en el estilo japonés.",
   },
   {
     name: "Dalma",
     instagram: "https://www.instagram.com/d.almatattoo",
     image: "https://placehold.co/400x500",
     styles: ["Fine Line", "Minimalist"],
-    bio: "Especializada en diseños delicados y minimalistas."
-  }
+    bio: "Especializada en diseños delicados y minimalistas.",
+  },
 ];
 
 export default function ArtistSection() {
   return (
     <section id="artists" className="py-20 bg-background/30 backdrop-blur-sm">
       <div className="container mx-auto px-4">
-        <motion.h2 
+        <motion.h2
           className="text-4xl font-bold text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          Nuestros Artistas
+          Artistas
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -83,8 +83,8 @@ export default function ArtistSection() {
                 <h3 className="text-xl font-bold">{artist.name}</h3>
                 <p className="text-muted-foreground">{artist.bio}</p>
                 <div className="flex flex-wrap gap-2">
-                  {artist.styles.map(style => (
-                    <span 
+                  {artist.styles.map((style) => (
+                    <span
                       key={style}
                       className="text-xs px-2 py-1 bg-primary/10 text-primary rounded-sm"
                     >

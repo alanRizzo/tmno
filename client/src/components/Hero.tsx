@@ -69,7 +69,7 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
             >
               <img 
-                src="/logo.jpg" 
+                src="/logo.svg" 
                 alt="Tu Madre Nos Odia"
                 className="w-64 h-64 object-contain relative"
                 style={{
