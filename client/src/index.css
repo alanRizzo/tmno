@@ -11,3 +11,55 @@
     @apply font-sans antialiased bg-background text-foreground;
   }
 }
+
+/* Glitch effect */
+@keyframes glitch {
+  0% {
+    clip-path: inset(50% 0 30% 0);
+    transform: translate(-5px, 5px);
+  }
+  20% {
+    clip-path: inset(15% 0 65% 0);
+    transform: translate(5px, -5px);
+  }
+  40% {
+    clip-path: inset(70% 0 5% 0);
+    transform: translate(-5px, 5px);
+  }
+  60% {
+    clip-path: inset(25% 0 55% 0);
+    transform: translate(5px, -5px);
+  }
+  80% {
+    clip-path: inset(85% 0 5% 0);
+    transform: translate(-5px, 5px);
+  }
+  100% {
+    clip-path: inset(50% 0 30% 0);
+    transform: translate(5px, -5px);
+  }
+}
+
+/* Scanline effect */
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Noise animation */
+@keyframes noise {
+  0%, 100% { transform: translate(0,0) }
+  10% { transform: translate(-5%,-5%) }
+  20% { transform: translate(-10%,5%) }
+  30% { transform: translate(5%,-10%) }
+  40% { transform: translate(-5%,15%) }
+  50% { transform: translate(-10%,5%) }
+  60% { transform: translate(15%,0) }
+  70% { transform: translate(0,10%) }
+  80% { transform: translate(-15%,0) }
+  90% { transform: translate(10%,5%) }
+}
