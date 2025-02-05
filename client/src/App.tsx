@@ -1,4 +1,6 @@
+
 import { QueryClientProvider } from "@tanstack/react-query";
+import { useEffect, useState } from "react";
 import { queryClient } from "./lib/queryClient";
 import { Toaster } from "@/components/ui/toaster";
 import Navigation from "@/components/Navigation";
@@ -19,6 +21,21 @@ function LocationSection() {
 }
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="fixed inset-0 flex items-center justify-center bg-black">
+        <img src="/logo.svg" alt="Loading" className="w-32 h-32 animate-fade-in" />
+      </div>
+    );
+  }
+
   return (
     <QueryClientProvider client={queryClient}>
       <Navigation />
