@@ -1,3 +1,4 @@
+
 export default function LocationSection() {
   return (
     <section id="location" className="py-20">
@@ -7,7 +8,7 @@ export default function LocationSection() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <p className="text-xl text-muted-foreground mt-4">VISITANOS</p>
+          <p className="text-xl text-muted-foreground hover:text-primary transition-colors duration-300 mt-4">VISITANOS</p>
         </a>
       </div>
     </section>
