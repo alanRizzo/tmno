@@ -2,16 +2,10 @@
 import { motion } from "framer-motion";
 import { SiInstagram } from "react-icons/si";
 import { artists } from "../data";
-import { useRef } from "react";
 
 export default function ArtistSection() {
-  const carouselRef = useRef<HTMLDivElement>(null);
-
-  // Create a duplicate array for infinite scroll effect
-  const duplicatedArtists = [...artists, ...artists];
-
   return (
-    <section id="artists" className="py-20 bg-background/30 backdrop-blur-sm overflow-hidden">
+    <section id="artists" className="py-20 bg-background/30 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <motion.h2
           className="text-4xl font-bold text-center mb-12"
@@ -20,30 +14,15 @@ export default function ArtistSection() {
           viewport={{ once: true }}
         ></motion.h2>
 
-        <motion.div
-          ref={carouselRef}
-          className="flex gap-8 cursor-grab active:cursor-grabbing"
-          drag="x"
-          dragConstraints={{ right: 0, left: -2000 }}
-          initial={{ x: 0 }}
-          animate={{
-            x: [-2000, 0],
-            transition: {
-              x: {
-                repeat: Infinity,
-                repeatType: "loop",
-                duration: 50,
-                ease: "linear",
-              },
-            },
-          }}
-          whileHover={{ scale: 0.98 }}
-          whileTap={{ cursor: "grabbing" }}
-        >
-          {duplicatedArtists.map((artist, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {artists.map((artist, index) => (
             <motion.div
-              key={`${artist.name}-${index}`}
-              className="relative group h-[500px] min-w-[300px] overflow-hidden rounded-lg flex-shrink-0"
+              key={artist.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="relative group h-[500px] overflow-hidden rounded-lg"
             >
               <a
                 href={artist.instagram}
@@ -78,7 +57,7 @@ export default function ArtistSection() {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
