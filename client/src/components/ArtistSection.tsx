@@ -24,6 +24,7 @@ export default function ArtistSection() {
               className="relative group h-[500px] overflow-hidden rounded-lg"
             >
               <img
+                loading="lazy"
                 src={artist.image}
                 alt={artist.name}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
