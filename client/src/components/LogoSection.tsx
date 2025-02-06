@@ -1,4 +1,4 @@
-export default function logoSection() {
+export default function LogoSection() {
   return (
     <section id="logo" className="py-20">
       <div className="container mx-auto px-4 flex flex-col items-center justify-center">
@@ -7,7 +7,11 @@ export default function logoSection() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/logo.png" alt="logo" className="relative w-64 h-64" />
+          <img
+            src="/logo.png"
+            alt="logo"
+            className="relative w-64 h-64 transition-all duration-300 hover:brightness-150"
+          />
         </a>
       </div>
     </section>
