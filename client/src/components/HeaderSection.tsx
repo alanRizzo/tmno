@@ -1,41 +1,78 @@
-
-import { FaInstagram, FaMapMarkerAlt } from "react-icons/fa";
-
 export default function HeaderSection() {
   return (
-    <section id="logo" className="py-6">
-      <div className="container mx-auto px-4 flex flex-row items-center justify-between md:flex-row">
-        <a
-          href="https://www.instagram.com/tumadrenosodia/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xs hover:text-red-600 md:hidden"
-        >
-          INSTAGRAM
-        </a>
-        
-        <a
-          href="/"
-          className="flex items-center space-x-3"
-        >
-          <img
-            src="/logo.png"
-            alt="logo"
-            className="w-12 h-12 transition-all duration-300 hover:brightness-150 md:w-16 md:h-16"
-          />
-          <span className="text-lg font-bold hidden md:inline">
-            TU MADRE NOS ODIA
-          </span>
-        </a>
+    <section id="logo" className="py-10">
+      <div className="container mx-auto px-4">
+        {/* Desktop Header - Visible on screens larger than sm */}
+        <div className="hidden sm:flex items-center justify-between">
+          {/* Logo */}
+          <div className="flex items-center space-x-3">
+            <a
+              href="https://www.instagram.com/tumadrenosodia/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-3"
+            >
+              <img
+                src="/logo.png"
+                alt="logo"
+                className="w-16 h-16 transition-all duration-300 hover:brightness-150"
+              />
+              <span className="text-lg font-bold">TU MADRE NOS ODIA</span>
+            </a>
+          </div>
 
-        <a
-          href="https://maps.app.goo.gl/JMPjuxhZwpQeyPBc8"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xs hover:text-red-600 md:hidden"
-        >
-          ¿CÓMO LLEGAR?
-        </a>
+          {/* Links for Instagram and location */}
+          <div className="flex items-center space-x-4">
+            <a
+              href="https://www.instagram.com/tumadrenosodia/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm hover:text-red-600"
+            >
+              INSTAGRAM
+            </a>
+            <a
+              href="https://maps.app.goo.gl/JMPjuxhZwpQeyPBc8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm hover:text-red-600"
+            >
+              DIRECCIÓN
+            </a>
+          </div>
+        </div>
+
+        {/* Mobile Header - Visible on screens smaller than sm */}
+        <div className="sm:hidden flex items-center justify-between">
+          {/* Instagram link */}
+          <a
+            href="https://www.instagram.com/tumadrenosodia/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm hover:text-red-600 flex-1 text-left"
+          >
+            INSTAGRAM
+          </a>
+
+          {/* Logo - Centered */}
+          <div className="flex items-center justify-center flex-1">
+            <img
+              src="/logo.png"
+              alt="logo"
+              className="w-20 h-20 transition-all duration-300 hover:brightness-150"
+            />
+          </div>
+
+          {/* Location link */}
+          <a
+            href="https://maps.app.goo.gl/JMPjuxhZwpQeyPBc8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm hover:text-red-600 flex-1 text-right"
+          >
+            DIRECCIÓN
+          </a>
+        </div>
       </div>
     </section>
   );

@@ -1,33 +1,40 @@
 import { motion } from "framer-motion";
 import { SiInstagram } from "react-icons/si";
 import { artists } from "../data";
+import { shuffleArray } from "../shuffle";
 
 export default function ArtistSection() {
-  return (
-    <section id="artists" className="py-10 bg-background/60">
-      <div className="container mx-auto px-4">
-        <motion.h2
-          className="text-4xl font-bold text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        ></motion.h2>
+  const shuffledArtists = shuffleArray(artists);
 
+  return (
+    <section id="artists" className="mx-6 py-10 bg-background/60 rounded-lg">
+      <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {artists.map((artist, index) => (
+          {shuffledArtists.map((artist, index) => (
             <motion.div
               key={artist.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20, scale: 0.9 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                transition: {
+                  duration: 0.8,
+                  delay: index * 0.2,
+                  ease: "easeOut",
+                },
+              }}
+              whileHover={{ scale: 1.05 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="relative group h-[500px] overflow-hidden rounded-lg"
+              className="relative group h-[500px] overflow-hidden rounded-lg shadow-2xl"
             >
-              <img
+              <motion.img
                 loading="lazy"
                 src={artist.image}
                 alt={artist.name}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                initial={{ scale: 1 }}
+                whileHover={{ scale: 1.1 }}
               />
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/90" />
               <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-white text-center">
