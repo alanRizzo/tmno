@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { SiInstagram } from "react-icons/si";
 import { artists } from "../data";
@@ -21,32 +22,33 @@ export default function ArtistSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="relative group"
+              className="relative group h-[500px] overflow-hidden rounded-lg"
             >
               <a
                 href={artist.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block relative aspect-[4/5] overflow-hidden"
+                className="block absolute inset-0"
               >
                 <img
                   src={artist.image}
                   alt={artist.name}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/90" />
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <SiInstagram className="text-5xl text-white" />
                 </div>
               </a>
 
-              <div className="mt-4 space-y-2">
-                <h3 className="text-xl font-bold">{artist.name}</h3>
-                <p className="text-muted-foreground">{artist.bio}</p>
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h3 className="text-2xl font-bold mb-2">{artist.name}</h3>
+                <p className="text-gray-200 mb-3">{artist.bio}</p>
                 <div className="flex flex-wrap gap-2">
                   {artist.styles.map((style) => (
                     <span
                       key={style}
-                      className="text-xs px-2 py-1 bg-primary/10 text-primary rounded-sm"
+                      className="text-xs px-2 py-1 bg-white/10 text-white rounded-sm backdrop-blur-sm"
                     >
                       {style}
                     </span>
