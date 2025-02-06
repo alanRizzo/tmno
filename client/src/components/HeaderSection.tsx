@@ -1,14 +1,22 @@
+
 import { FaInstagram, FaMapMarkerAlt } from "react-icons/fa";
 
 export default function HeaderSection() {
   return (
     <section id="logo" className="py-6">
-      <div className="container mx-auto px-4 flex flex-col sm:flex-row items-center justify-between">
+      <div className="container mx-auto px-4 flex flex-row items-center justify-between">
         <a
           href="https://www.instagram.com/tumadrenosodia/"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center space-x-3"
+          className="text-xs sm:text-sm hover:text-red-600 order-1 sm:order-1"
+        >
+          INSTAGRAM
+        </a>
+        
+        <a
+          href="/"
+          className="flex items-center space-x-3 order-2 sm:order-2"
         >
           <img
             src="/logo.png"
@@ -19,24 +27,15 @@ export default function HeaderSection() {
             TU MADRE NOS ODIA
           </span>
         </a>
-        <div className="flex space-x-4 sm:order-none order-first w-full justify-start sm:justify-end mt-2 sm:mt-0">
-          <a
-            href="https://www.instagram.com/tumadrenosodia/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs sm:text-sm hover:text-red-600"
-          >
-            INSTAGRAM
-          </a>
-          <a
-            href="https://maps.app.goo.gl/JMPjuxhZwpQeyPBc8"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs sm:text-sm hover:text-red-600"
-          >
-            ¿CÓMO LLEGAR?
-          </a>
-        </div>
+
+        <a
+          href="https://maps.app.goo.gl/JMPjuxhZwpQeyPBc8"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs sm:text-sm hover:text-red-600 order-3 sm:order-3"
+        >
+          ¿CÓMO LLEGAR?
+        </a>
       </div>
     </section>
   );
