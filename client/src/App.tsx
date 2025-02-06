@@ -12,7 +12,13 @@ function App() {
 
   if (loading) {
     return (
-      <div className="fixed inset-0 flex items-center justify-center bg-black">
+      <div className="fixed inset-0 flex items-center justify-center" style={{
+        backgroundImage: 'url("/background_g.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+        backgroundRepeat: 'no-repeat'
+      }}>
         <div className="relative">
           {/* Glowing Pulse Effect */}
           <div className="absolute inset-0 flex items-center justify-center">
