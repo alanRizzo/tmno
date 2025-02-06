@@ -1,24 +1,19 @@
 import { useEffect, useState } from "react";
 import ArtistSection from "@/components/ArtistSection";
 import LocationSection from "@/components/LocationSection";
+import LogoSection from "@/components/LogoSection";
 
 function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1000);
+    const timer = setTimeout(() => setLoading(false), 1500);
     return () => clearTimeout(timer);
   }, []);
 
   if (loading) {
     return (
-      <div className="fixed inset-0 flex items-center justify-center" style={{
-        backgroundImage: 'url("/background_g.jpg")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
-        backgroundRepeat: 'no-repeat'
-      }}>
+      <div className="fixed inset-0 flex items-center justify-center">
         <div className="relative">
           {/* Glowing Pulse Effect */}
           <div className="absolute inset-0 flex items-center justify-center">
@@ -38,6 +33,7 @@ function App() {
 
   return (
     <main>
+      <LogoSection />
       <ArtistSection />
       <LocationSection />
     </main>
