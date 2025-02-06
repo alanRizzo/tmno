@@ -16,7 +16,7 @@
     content: '';
     position: fixed;
     inset: 0;
-    background-image: url('/background.jpeg');
+    background-image: url('/background_g.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
