@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Summer Farmhouse';
-  src: url('https://fonts.cdnfonts.com/s/97135/Summer Farmhouse.woff') format('woff');
-  font-weight: 400;
+  font-family: 'SummerFarmhouse';
+  src: url('https://fonts.cdnfonts.com/s/97135/Summer%20Farmhouse.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
