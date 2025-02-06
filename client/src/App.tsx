@@ -6,18 +6,26 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1000);
+    const timer = setTimeout(() => setLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
 
   if (loading) {
     return (
       <div className="fixed inset-0 flex items-center justify-center bg-black">
-        <img
-          src="/logo.svg"
-          alt="Loading"
-          className="w-32 h-32 animate-fade-in"
-        />
+        <div className="relative">
+          {/* Glowing Pulse Effect */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-40 h-40 bg-white rounded-full animate-ping opacity-20"></div>
+          </div>
+
+          {/* Rotating Image */}
+          <img
+            src="/logo.png"
+            alt="Loading"
+            className="relative w-64 h-64 animate-spin-slow"
+          />
+        </div>
       </div>
     );
   }
