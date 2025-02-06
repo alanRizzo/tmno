@@ -4,26 +4,26 @@ import { FaInstagram, FaMapMarkerAlt } from "react-icons/fa";
 export default function HeaderSection() {
   return (
     <section id="logo" className="py-6">
-      <div className="container mx-auto px-4 flex flex-row items-center justify-between">
+      <div className="container mx-auto px-4 flex flex-row items-center justify-between md:flex-row">
         <a
           href="https://www.instagram.com/tumadrenosodia/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xs sm:text-sm hover:text-red-600 order-1 sm:order-1"
+          className="text-xs hover:text-red-600 md:hidden"
         >
           INSTAGRAM
         </a>
         
         <a
           href="/"
-          className="flex items-center space-x-3 order-2 sm:order-2"
+          className="flex items-center space-x-3"
         >
           <img
             src="/logo.png"
             alt="logo"
-            className="w-16 h-16 sm:w-12 sm:h-12 transition-all duration-300 hover:brightness-150"
+            className="w-12 h-12 transition-all duration-300 hover:brightness-150 md:w-16 md:h-16"
           />
-          <span className="text-lg font-bold hidden sm:inline">
+          <span className="text-lg font-bold hidden md:inline">
             TU MADRE NOS ODIA
           </span>
         </a>
@@ -32,7 +32,7 @@ export default function HeaderSection() {
           href="https://maps.app.goo.gl/JMPjuxhZwpQeyPBc8"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xs sm:text-sm hover:text-red-600 order-3 sm:order-3"
+          className="text-xs hover:text-red-600 md:hidden"
         >
           ¿CÓMO LLEGAR?
         </a>
