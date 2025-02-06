@@ -47,7 +47,7 @@ export default function ArtistSection() {
                   {artist.styles.map((style) => (
                     <span
                       key={style}
-                      className="text-xs px-2 py-1 bg-white/10 text-white rounded-sm backdrop-blur-sm"
+                      className="text-xs px-2 py-1 bg-white/10 text-white rounded-sm backdrop-blur-sm hover:text-red-500 transition-colors duration-300"
                     >
                       {style}
                     </span>
