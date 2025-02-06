@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes carousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-carousel {
+  animation: carousel 30s linear infinite;
+}
+
+.animate-carousel:hover {
+  animation-play-state: paused;
+}
+
 @layer base {
   body {
     @apply font-sans antialiased text-foreground;
