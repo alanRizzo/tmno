@@ -1,6 +1,6 @@
 export default function LocationSection() {
   return (
-    <section id="location" className="py-20">
+    <section id="location" className="py-10">
       <div className="container mx-auto px-4 flex justify-end">
         <a
           href="https://maps.app.goo.gl/JMPjuxhZwpQeyPBc8"

@@ -1,11 +1,10 @@
-
 import { motion } from "framer-motion";
 import { SiInstagram } from "react-icons/si";
 import { artists } from "../data";
 
 export default function ArtistSection() {
   return (
-    <section id="artists" className="py-20 bg-background/30 backdrop-blur-sm">
+    <section id="artists" className="py-10 bg-background/60">
       <div className="container mx-auto px-4">
         <motion.h2
           className="text-4xl font-bold text-center mb-12"

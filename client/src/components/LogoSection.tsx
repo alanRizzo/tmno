@@ -1,6 +1,6 @@
 export default function LogoSection() {
   return (
-    <section id="logo" className="py-20">
+    <section id="logo" className="py-10">
       <div className="container mx-auto px-4 flex flex-col items-center justify-center">
         <a
           href="https://www.instagram.com/tumadrenosodia/"
