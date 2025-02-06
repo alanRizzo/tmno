@@ -31,7 +31,9 @@ export default function ArtistSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/90" />
               <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-white text-center">
-                <h3 className="text-2xl font-bold mb-2">{artist.name}</h3>
+                <h3 className="text-2xl font-bold mb-2">
+                  {artist.name.toUpperCase()}
+                </h3>
                 <p className="text-gray-200 mb-3">{artist.bio}</p>
                 <div className="flex flex-wrap gap-2 justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {artist.styles.map((style) => (
