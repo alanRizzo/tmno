@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        summerFarmhouse: ["SummerFarmhouse", "sans-serif"],
+        summerFarmhouse: ["Summer Farmhouse", "sans-serif"],
       },
       colors: {
         background: "hsl(var(--background))",
