@@ -63,7 +63,7 @@ export default function ArtistSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="relative group min-w-[300px] transition-all duration-300 hover:scale-110 hover:z-10"
+                className="relative group min-w-[300px] transition-all duration-300 hover:z-10"
               >
                 <a
                   href={artist.instagram}
@@ -74,7 +74,7 @@ export default function ArtistSection() {
                   <img
                     src={artist.image}
                     alt={artist.name}
-                    className="w-full h-full object-cover transition-all duration-500 group-hover:grayscale"
+                    className="w-full h-full object-cover transition-all duration-500 group-hover:grayscale group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <SiInstagram className="text-5xl text-white" />
