@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import ArtistSection from "@/components/ArtistSection";
-import LocationSection from "@/components/LocationSection";
-import LogoSection from "@/components/LogoSection";
+import HeaderSection from "@/components/HeaderSection";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -33,9 +32,8 @@ function App() {
 
   return (
     <main>
-      <LogoSection />
+      <HeaderSection />
       <ArtistSection />
-      <LocationSection />
     </main>
   );
 }
