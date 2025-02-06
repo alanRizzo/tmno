@@ -5,19 +5,15 @@ export default function HeaderSection() {
         {/* Desktop Header - Visible on screens larger than sm */}
         <div className="hidden sm:flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-3 transition-all duration-300">
             <a
               href="https://www.instagram.com/tumadrenosodia/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-3"
             >
-              <img
-                src="/logo.png"
-                alt="logo"
-                className="w-16 h-16 transition-all duration-300 hover:brightness-150"
-              />
-              <span className="text-lg font-bold">TU MADRE NOS ODIA</span>
+              <img src="/logo.png" alt="logo" className="w-16 h-16" />
+              <span className="text-sm font-bold">TU MADRE NOS ODIA</span>
             </a>
           </div>
 
@@ -27,7 +23,7 @@ export default function HeaderSection() {
               href="https://www.instagram.com/tumadrenosodia/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm hover:text-red-600"
+              className="text-sm font-bold hover:text-red-600"
             >
               INSTAGRAM
             </a>
@@ -35,7 +31,7 @@ export default function HeaderSection() {
               href="https://maps.app.goo.gl/JMPjuxhZwpQeyPBc8"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm hover:text-red-600"
+              className="text-sm font-bold hover:text-red-600"
             >
               DIRECCIÓN
             </a>
@@ -59,7 +55,7 @@ export default function HeaderSection() {
             <img
               src="/logo.png"
               alt="logo"
-              className="w-20 h-20 transition-all duration-300 hover:brightness-150"
+              className="w-20 h-20 transition-all duration-300"
             />
           </div>
 
