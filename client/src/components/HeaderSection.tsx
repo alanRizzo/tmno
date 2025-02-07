@@ -1,11 +1,11 @@
 export default function HeaderSection() {
   return (
-    <section id="logo" className="py-10">
+    <section id="logo" className="mx-6 py-10">
       <div className="container mx-auto px-4">
         {/* Desktop Header - Visible on screens larger than sm */}
         <div className="hidden sm:flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-3 transition-all duration-300">
+          <div className="flex items-center space-x-3">
             <a
               href="https://www.instagram.com/tumadrenosodia/"
               target="_blank"
@@ -13,7 +13,7 @@ export default function HeaderSection() {
               className="flex items-center space-x-3"
             >
               <img src="/logo.png" alt="logo" className="w-16 h-16" />
-              <span className="text-sm font-bold">TU MADRE NOS ODIA</span>
+              <span className="text-2xl">TU MADRE NOS ODIA</span>
             </a>
           </div>
 
@@ -23,7 +23,7 @@ export default function HeaderSection() {
               href="https://www.instagram.com/tumadrenosodia/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-bold hover:text-red-600"
+              className="text-xl hover:text-red-600"
             >
               INSTAGRAM
             </a>
@@ -31,7 +31,7 @@ export default function HeaderSection() {
               href="https://maps.app.goo.gl/JMPjuxhZwpQeyPBc8"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-bold hover:text-red-600"
+              className="text-xl hover:text-red-600"
             >
               DIRECCIÓN
             </a>
@@ -45,7 +45,7 @@ export default function HeaderSection() {
             href="https://www.instagram.com/tumadrenosodia/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm hover:text-red-600 flex-1 text-left"
+            className="text-xl hover:text-red-600 flex-1 text-left"
           >
             INSTAGRAM
           </a>
@@ -64,7 +64,7 @@ export default function HeaderSection() {
             href="https://maps.app.goo.gl/JMPjuxhZwpQeyPBc8"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm hover:text-red-600 flex-1 text-right"
+            className="text-xl hover:text-red-600 flex-1 text-right"
           >
             DIRECCIÓN
           </a>

@@ -7,7 +7,7 @@ export default function ArtistSection() {
   const shuffledArtists = shuffleArray(artists);
 
   return (
-    <section id="artists" className="mx-6 py-10 bg-background/60 rounded-lg">
+    <section id="artists" className="mx-6 py-10 sm:bg-background/60 rounded-lg">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {shuffledArtists.map((artist, index) => (
