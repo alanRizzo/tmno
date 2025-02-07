@@ -53,7 +53,9 @@ app.use((req, res, next) => {
   if (app.get("env") === "development") {
     await setupVite(app, server);
   } else {
-    serveStatic(app);
+    await setupVite(app, server);
+    // serveStatic(app);
+    // FIX THIS!
   }
 
   // ALWAYS serve the app on port 5000
