@@ -50,6 +50,7 @@ app.use((req, res, next) => {
   // Importantly, only setup Vite in development and after
   // setting up all the other routes so the catch-all route
   // doesn't interfere with the other routes
+  console.log(`Env value is ${app.get("env")}`);
   if (app.get("env") === "development") {
     await setupVite(app, server);
   } else {
