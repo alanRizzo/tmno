@@ -1,11 +1,16 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { shuffleArray } from "../shuffle";
 import { artists } from "../data";
 import ArtistCard from "./ui/ArtistCard";
 
 export default function ArtistSection() {
   const shuffledArtists = useMemo(() => shuffleArray(artists), []);
+  const [activeIndex, setActiveIndex] = useState(null);
 
+  const handleCardClick = (index) => {
+    setActiveIndex(activeIndex === index ? null : index); // Toggle active state
+  };
+  
   const cardVariants = {
     hidden: { opacity: 0, y: 20, scale: 0.9 },
     visible: (i) => ({
@@ -26,6 +31,8 @@ export default function ArtistSection() {
               artist={artist}
               index={index}
               cardVariants={cardVariants}
+              isActive={activeIndex === index}
+              onClick={handleCardClick}
             />
           ))}
         </div>
