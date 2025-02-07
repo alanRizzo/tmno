@@ -3,11 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply font-quicksand antialiased text-foreground;
-
-  }
-
   #root {
     min-height: 100vh;
     position: relative;
