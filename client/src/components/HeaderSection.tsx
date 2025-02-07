@@ -1,75 +1,51 @@
+import { LuMapPinHouse, LuInstagram } from "react-icons/lu";
+
+const IconLink = ({ href, label, Icon, align = "center" }) => {
+  const alignmentClass =
+    align === "left" ? "justify-start" : align === "right" ? "justify-end" : "justify-center";
+
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      title={label}
+      aria-label={label}
+      className={`flex-1 flex items-center ${alignmentClass} hover:text-red-600`}
+    >
+      <Icon className="text-3xl text-white" />
+    </a>
+  );
+};
+
 export default function HeaderSection() {
   return (
-    <section id="logo" className="mx-6 py-10">
+    <header id="header" className="mx-6 py-10" role="banner">
       <div className="container mx-auto px-4">
-        {/* Desktop Header - Visible on screens larger than sm */}
-        <div className="hidden sm:flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <a
-              href="https://www.instagram.com/tumadrenosodia/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-3"
-            >
-              <img src="/logo.png" alt="logo" className="w-16 h-16" />
-              <span className="text-2xl">TU MADRE NOS ODIA</span>
-            </a>
-          </div>
-
-          {/* Links for Instagram and location */}
-          <div className="flex items-center space-x-4">
-            <a
-              href="https://www.instagram.com/tumadrenosodia/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xl hover:text-red-600"
-            >
-              INSTAGRAM
-            </a>
-            <a
-              href="https://maps.app.goo.gl/JMPjuxhZwpQeyPBc8"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xl hover:text-red-600"
-            >
-              DIRECCIÓN
-            </a>
-          </div>
-        </div>
-
-        {/* Mobile Header - Visible on screens smaller than sm */}
-        <div className="sm:hidden flex items-center justify-between">
-          {/* Instagram link */}
-          <a
+        <div className="flex items-center justify-between">
+          <IconLink
             href="https://www.instagram.com/tumadrenosodia/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xl hover:text-red-600 flex-1 text-left"
-          >
-            INSTAGRAM
-          </a>
+            label="Follow us on Instagram"
+            Icon={LuInstagram}
+            align="left"
+          />
 
-          {/* Logo - Centered */}
-          <div className="flex items-center justify-center flex-1">
+          <div className="flex-1 flex justify-center">
             <img
               src="/logo.png"
-              alt="logo"
-              className="w-20 h-20 transition-all duration-300"
+              alt="Company Logo"
+              className="w-32 h-32 sm:w-48 sm:h-48"
             />
           </div>
 
-          {/* Location link */}
-          <a
+          <IconLink
             href="https://maps.app.goo.gl/JMPjuxhZwpQeyPBc8"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xl hover:text-red-600 flex-1 text-right"
-          >
-            DIRECCIÓN
-          </a>
+            label="Find us on Google Maps"
+            Icon={LuMapPinHouse}
+            align="right"
+          />
         </div>
       </div>
-    </section>
+    </header>
   );
 }
