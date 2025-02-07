@@ -19,11 +19,11 @@ const IconLink = ({ href, label, Icon }) => {
 
 export default function HeaderSection() {
   return (
-    <header id="header" className="mx-2 py-10" role="banner">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between">
-          {/* Left column */}
-          <div className="flex-1 flex justify-start">
+    <header id="header" className="w-full py-10 px-6 md:px-12" role="banner">
+      <div className="mx-auto px-4">
+        <div className="flex items-center justify-between gap-x-4">
+          {/* Left column (Icons) */}
+          <div className="w-auto max-w-lg flex justify-start">
             <div className="md:hidden">
               <IconLink
                 href="https://www.instagram.com/tumadrenosodia/"
@@ -31,20 +31,19 @@ export default function HeaderSection() {
                 Icon={LuInstagram}
               />
             </div>
-            <div className="hidden md:block">{/* Placeholder if needed */}</div>
           </div>
 
-          {/* Center column: logo */}
-          <div className="flex-1 flex justify-center">
+          {/* Center column (Logo) */}
+          <div className="flex justify-center flex-1">
             <img
               src="/logo.png"
               alt="Company Logo"
-              className="w-28 h-28 sm:w-48 sm:h-48"
+              className="w-28 h-28 sm:w-40 sm:h-40"
             />
           </div>
 
-          {/* Right column */}
-          <div className="flex-1 flex justify-end">
+          {/* Right column (Icons) */}
+          <div className="w-auto max-w-lg flex justify-end">
             <div className="md:hidden">
               <IconLink
                 href="https://maps.app.goo.gl/JMPjuxhZwpQeyPBc8"
