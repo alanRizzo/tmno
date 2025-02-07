@@ -19,7 +19,7 @@ const IconLink = ({ href, label, Icon }) => {
 
 export default function HeaderSection() {
   return (
-    <header id="header" className="mx-6 py-10" role="banner">
+    <header id="header" className="mx-2 py-10" role="banner">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Left column */}
@@ -52,7 +52,7 @@ export default function HeaderSection() {
                 Icon={LuMapPinHouse}
               />
             </div>
-            <div className="hidden md:flex items-center gap-4">
+            <div className="hidden md:flex flex-col items-center gap-4">
               <IconLink
                 href="https://www.instagram.com/tumadrenosodia/"
                 label="Follow us on Instagram"
