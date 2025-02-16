@@ -21,7 +21,7 @@ export default function ArtistCard({ artist, index, cardVariants }) {
 				initial={{ scale: 1 }}
 				whileHover={{ scale: 1.1 }}
 			/>
-			<div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/0" />
+			<div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-black/0" />
 			<div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-white">
 				{/* Name at the top-right */}
 				<h3 className="absolute top-6 right-6 text-3xl font-bold text-right">
@@ -36,7 +36,7 @@ export default function ArtistCard({ artist, index, cardVariants }) {
 					{artist.styles.map((style) => (
 						<span
 							key={style}
-							className="text-xs px-2 py-1 bg-white/10 text-white rounded-sm"
+							className="text-xs px-2 py-1 bg-white/10 text-white rounded-xs"
 						>
 							{style}
 						</span>

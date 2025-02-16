@@ -13,7 +13,9 @@ const IconLink = ({ href, label, Icon }: IconLinkProps) => {
 	return (
 		<div className="relative flex items-center justify-center group">
 			{!isMobile && (
-				<div className="absolute right-full mr-2 px-2 py-1 ">{label}</div>
+				<div className="absolute right-full mr-2 px-2 py-1 bg-white text-black text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+					{label}
+				</div>
 			)}
 			<a
 				href={href}
@@ -23,7 +25,7 @@ const IconLink = ({ href, label, Icon }: IconLinkProps) => {
 				aria-label={label}
 				className="inline-flex items-center justify-center"
 			>
-				<Icon className="text-3xl md:text-4xl" />
+				<Icon className="text-3xl" />
 			</a>
 		</div>
 	);
