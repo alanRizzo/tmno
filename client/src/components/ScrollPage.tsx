@@ -11,7 +11,7 @@ const BackgroundTexture = () => (
 );
 
 const Section = ({ children }): React.JSX.Element => (
-	<div className="relative flex flex-col h-screen w-screen bg-black">
+	<div className="relative flex flex-col w-screen bg-black">
 		<BackgroundTexture />
 		<div className="relative z-10">{children}</div>
 	</div>
@@ -21,7 +21,7 @@ export default function FullPageComponent() {
 	const shuffledArtists = useMemo(() => shuffleArray(artists), []);
 
 	return (
-		<div className="fixed top-0 left-0 h-screen w-screen">
+		<div className="fixed top-0 left-0 h-screen max-h-full">
 			<MegaScroll>
 				<Section>
 					<HeaderSection />

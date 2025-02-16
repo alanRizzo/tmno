@@ -58,10 +58,6 @@
 		@apply font-quicksand antialiased text-foreground;
 	}
 
-	* {
-		border: 0px solid red;
-	}
-
 	.invert {
 		filter: invert(100%);
 	}
