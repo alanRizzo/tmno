@@ -7,7 +7,7 @@ interface ArtistCardProps {
 
 export default function ArtistCard({ artist }: ArtistCardProps) {
 	return (
-		<div className="flex items-center justify-center md:min-h-screen p-4">
+		<div className="flex items-center justify-center md:min-h-screen mt-12 md:mt-0 p-4">
 			<div className="flex flex-col md:flex-row border border-gray-300 p-6 shadow-lg bg-transparent max-w-4xl w-full">
 				<img
 					src={artist.image}
