@@ -7,37 +7,25 @@
 		@apply font-quicksand antialiased text-foreground;
 	}
 
-	#root {
-		min-height: 100vh;
-		position: relative;
-		--width: 300px;
-		--height: 500px;
-		--quantity: 4;
+	* {
+		border: 1px solid red;
 	}
 
-	#root::before {
-		content: "";
-		position: fixed;
-		inset: 0;
-		background-image: url("/background_g.jpg");
-		background-size: cover;
-		background-position: center;
-		background-attachment: fixed;
-		background-repeat: no-repeat;
-		filter: brightness(0.6) blur(2px);
-		z-index: -2;
+	.invert {
+		filter: invert(100%);
 	}
 
 	.slider {
+		--width: 300px;
+		--height: 500px;
+		--quantity: 4;
 		width: 100%;
 		height: var(--height);
 		overflow: hidden;
-		mask-image: linear-gradient(
-			to right,
-			transparent,
-			#000 10% 90%,
-			transparent
-		);
+		mask-image: linear-gradient(to right,
+				transparent,
+				#000 10% 90%,
+				transparent);
 	}
 
 	.slider .list {
@@ -61,6 +49,7 @@
 		from {
 			left: 100%;
 		}
+
 		to {
 			left: calc(var(--width) * -1);
 		}

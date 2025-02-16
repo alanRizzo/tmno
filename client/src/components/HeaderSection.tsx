@@ -1,71 +1,53 @@
 import { LuMapPinHouse, LuInstagram } from "react-icons/lu";
-
-const IconLink = ({ href, label, Icon }) => {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      title={label}
-      aria-label={label}
-      className="group"  // mark the anchor as a group
-    >
-      <Icon
-        className="text-3xl text-white"
-      />
-    </a>
-  );
-};
+import IconLink from "./ui/IconLink";
+import { useDevice } from "@/hooks/DeviceContext.tsx";
 
 export default function HeaderSection() {
-  return (
-    <header id="header" className="w-full py-10 px-6 md:px-12" role="banner">
-      <div className="mx-auto px-4">
-        <div className="flex items-center justify-between gap-x-4">
-          {/* Left column (Icons) */}
-          <div className="w-auto max-w-lg flex justify-start">
-            <div className="md:hidden">
-              <IconLink
-                href="https://www.instagram.com/tumadrenosodia/"
-                label="Follow us on Instagram"
-                Icon={LuInstagram}
-              />
-            </div>
-          </div>
+	const { isMobile } = useDevice();
 
-          {/* Center column (Logo) */}
-          <div className="flex justify-center flex-1">
-            <img
-              src="/logo.png"
-              alt="Company Logo"
-              className="w-28 h-28 sm:w-40 sm:h-40"
-            />
-          </div>
+	return (
+		<div className="relative h-screen">
+			<div className="flex justify-center items-center h-full">
+				<img
+					src="/logo.svg"
+					alt="TMNO"
+					className="w-80 h-80 md:w-96 md:h-96 invert"
+				/>
+			</div>
 
-          {/* Right column (Icons) */}
-          <div className="w-auto max-w-lg flex justify-end">
-            <div className="md:hidden">
-              <IconLink
-                href="https://maps.app.goo.gl/JMPjuxhZwpQeyPBc8"
-                label="Find us on Google Maps"
-                Icon={LuMapPinHouse}
-              />
-            </div>
-            <div className="hidden md:flex flex-col items-center gap-4">
-              <IconLink
-                href="https://www.instagram.com/tumadrenosodia/"
-                label="Follow us on Instagram"
-                Icon={LuInstagram}
-              />
-              <IconLink
-                href="https://maps.app.goo.gl/JMPjuxhZwpQeyPBc8"
-                label="Find us on Google Maps"
-                Icon={LuMapPinHouse}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-  );
+			{isMobile ? (
+				// Mobile
+				<>
+					<div className="absolute top-10 left-10">
+						<IconLink
+							href="https://www.instagram.com/tumadrenosodia/"
+							label="Instagram"
+							Icon={LuInstagram}
+						/>
+					</div>
+					<div className="absolute top-10 right-10">
+						<IconLink
+							href="https://maps.app.goo.gl/JMPjuxhZwpQeyPBc8"
+							label="Google Maps"
+							Icon={LuMapPinHouse}
+						/>
+					</div>
+				</>
+			) : (
+				// Desktop
+				<div className="absolute right-10 top-1/2 transform -translate-y-1/2 flex flex-col gap-4">
+					<IconLink
+						href="https://www.instagram.com/tumadrenosodia/"
+						label="Instagram"
+						Icon={LuInstagram}
+					/>
+					<IconLink
+						href="https://maps.app.goo.gl/JMPjuxhZwpQeyPBc8"
+						label="Google Maps"
+						Icon={LuMapPinHouse}
+					/>
+				</div>
+			)}
+		</div>
+	);
 }
