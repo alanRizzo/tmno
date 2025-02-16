@@ -13,7 +13,7 @@ export const artists: Artist[] = [
 		name: "Huevo",
 		instagram: "https://www.instagram.com/huevo.tmno",
 		image: "/huevo.jpg",
-		styles: ["Traditional", "Neo-Traditional"],
+		styles: ["Tradi", "Neo-Tradi"],
 		bio: "Especializado en diseños tradicionales con un toque moderno.",
 	},
 	{
