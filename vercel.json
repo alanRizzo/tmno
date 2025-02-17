@@ -1,6 +1,4 @@
 {
-  "version": 2,
-  "buildCommand": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
-  "outputDirectory": "dist/public",
-  "routes": [{ "src": "/(.*)", "dest": "dist/public/index.html" }]
+	"version": 2,
+	"routes": [{ "src": "/(.*)", "dest": "dist/public/index.html" }]
 }
