@@ -1,16 +1,40 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">`
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Tu Madre Nos Odia - Tattoo Studio" />
-    <title>Tu Madre Nos Odia</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+
+  <!-- SEO basic -->
+  <title>Tu Madre Nos Odia - Tattoo Studio</title>
+  <meta name="description"
+    content="Estudio de tatuajes profesional en San Francisco. Diseños personalizados, artistas expertos y ambiente seguro." />
+  <meta name="keywords" content="tatuajes, tattoo studio, tatuador profesional" />
+  <meta name="author" content="Tu Madre Nos Odia" />
+
+  <!-- Open Graph / redes sociales -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tu Madre Nos Odia - Estudio de Tatuajes" />
+  <meta property="og:description" content="Estudio de tatuajes profesional. Diseños únicos y personalizados." />
+  <meta property="og:image" content="/logo.svg" />
+  <meta property="og:url" content="https://tmno.vercel.app" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/public/logo.svg" />
+  <!-- <link rel="icon" type="image/png" href="/favicon.png" /> -->
+  <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png" /> -->
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+  <!-- Precarga de recursos críticos -->
+  <link rel="preload" as="image" href="/public/logo.svg">
+
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
