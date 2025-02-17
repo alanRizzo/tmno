@@ -21,17 +21,17 @@ export default function ArtistCard({ artist }: ArtistCardProps) {
 				</div>
 				<div className="md:w-1/2 flex flex-col justify-between p-4">
 					<div>
-						<h3 className="text-2xl font-bold">{artist.name.toUpperCase()}</h3>
-						<p className="text-base mt-3">{artist.bio}</p>
+						<h3 className="text-2xl font-bold uppercase">{artist.name}</h3>
+						<p className="text-base mt-3 text-stone-300 ">{artist.bio}</p>
 					</div>
-					<div className="flex flex-nowrap justify-between border-t border-gray-300 pt-4 mt-4">
+					<div className="flex justify-between border-t border-gray-300 pt-4 mt-4">
 						<div className="flex flex-wrap gap-2">
 							{artist.styles.map((style) => (
 								<span
 									key={style}
-									className="text-sm md:text-base uppercase px-3 py-1"
+									className="text-sm md:text-base text-stone-300 italic lowercase py-1"
 								>
-									{style}
+									#{style}
 								</span>
 							))}
 						</div>
@@ -41,7 +41,7 @@ export default function ArtistCard({ artist }: ArtistCardProps) {
 							rel="noopener noreferrer"
 							aria-label={`Visit ${artist.name}'s Instagram`}
 						>
-							<LuInstagram className="text-2xl" />
+							<LuInstagram className="text-2xl text-stone-300" />
 						</a>
 					</div>
 				</div>
