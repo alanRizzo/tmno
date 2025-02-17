@@ -14,7 +14,7 @@ export const artists: Artist[] = [
 		name: "Huevo",
 		instagram: "https://www.instagram.com/huevo.tmno",
 		image: "/huevo.jpg",
-		styles: ["Tradi", "Neo-Tradi"],
+		styles: ["Traditional", "Neo-Traditional"],
 		video: "/huevo.mp4",
 		bio: "Especializado en diseños tradicionales con un toque moderno.",
 	},
