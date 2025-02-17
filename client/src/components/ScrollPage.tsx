@@ -7,7 +7,7 @@ import { useMemo } from "react";
 import MegaScroll from "react-mega-scroll";
 
 const BackgroundTexture = () => (
-	<div className="absolute inset-0 bg-cover bg-center opacity-30 md:opacity-30 bg-[url('/texture.jpg')]" />
+	<div className="absolute inset-0 bg-cover bg-center opacity-40 md:opacity-40 bg-[url('/texture_4.avif')]" />
 );
 
 const Section = ({ children }): React.JSX.Element => (
