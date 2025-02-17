@@ -4,6 +4,7 @@ export interface Artist {
 	instagram: string;
 	image: string;
 	styles: string[];
+	video: string;
 	bio: string;
 }
 
@@ -14,6 +15,7 @@ export const artists: Artist[] = [
 		instagram: "https://www.instagram.com/huevo.tmno",
 		image: "/huevo.jpg",
 		styles: ["Tradi", "Neo-Tradi"],
+		video: "/huevo.mp4",
 		bio: "Especializado en diseños tradicionales con un toque moderno.",
 	},
 	{
@@ -22,6 +24,7 @@ export const artists: Artist[] = [
 		instagram: "https://www.instagram.com/emi_tatuero",
 		image: "/emi.jpg",
 		styles: ["Blackwork", "Dotwork"],
+		video: "/emi.mp4",
 		bio: "Creando patrones intrincados y diseños en blackwork.",
 	},
 	{
@@ -30,6 +33,7 @@ export const artists: Artist[] = [
 		instagram: "https://www.instagram.com/pitylocuras",
 		image: "/pity.jpg",
 		styles: ["Japanese", "Color"],
+		video: "/pity.mp4",
 		bio: "Maestro del color y arte inspirado en el estilo japonés.",
 	},
 	{
@@ -38,6 +42,7 @@ export const artists: Artist[] = [
 		instagram: "https://www.instagram.com/d.almatattoo",
 		image: "/dalma.jpg",
 		styles: ["Fine Line", "Minimalist"],
+		video: "/dalma.mp4",
 		bio: "Especializada en diseños delicados y minimalistas.",
 	},
 ];
