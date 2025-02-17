@@ -24,7 +24,7 @@ export default function ArtistCard({ artist }: ArtistCardProps) {
 						<h3 className="text-2xl font-bold uppercase">{artist.name}</h3>
 						<p className="text-base mt-3 text-stone-300 ">{artist.bio}</p>
 					</div>
-					<div className="flex justify-between border-t border-gray-300 pt-4 mt-4">
+					<div className="flex justify-between border-t border-gray-300 pt-6 mt-4">
 						<div className="flex flex-wrap gap-2">
 							{artist.styles.map((style) => (
 								<span
